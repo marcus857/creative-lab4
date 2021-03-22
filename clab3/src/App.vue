@@ -1,24 +1,29 @@
 <template>
 <div id="app">
   <div id="menu">
+
     <div id="brand">
       <router-link to="/">
-        <img src="/images/logo.png">
+        <h1> BLACKJACK </h1>
       </router-link>
     </div>
     <div id="side">
-      <router-link to="/browse">
-        <div class="menu-item browse">
-          <img src="/images/globe.png">
-          <p>Browse</p>
-        </div>
-      </router-link>
+
+<div id="lside">
+  <router-link to="/cart">
+    <div class="menu-item">
+        <img src="/images/PlayIcon.svg">
+        <p> Play BJ!</p>
+      </div>
+  </router-link>
+  </div>
       <router-link to="/cart">
         <div class="menu-item">
-          <img src="/images/love.png">
-          <p>{{this.$root.$data.cart.length}} items</p>
+          <img src="/images/CardIcon.svg">
+          <p>{{this.$root.$data.cart.length}} Cards</p>
         </div>
       </router-link>
+
     </div>
   </div>
   <router-view />
@@ -51,6 +56,11 @@ body {
   grid-area: brand;
   display: flex;
   justify-content: center;
+  
+}
+
+h1 {
+color: black;
 }
 
 #brand img {
@@ -65,6 +75,12 @@ body {
 
 #side img {
   width: 50px;
+  margin: 10px;
+}
+
+#lside img {
+  width: 63px;
+  margin: 10px;
 }
 
 .menu-item {
@@ -74,6 +90,7 @@ body {
 
 .menu-item p {
   margin: 0px;
+  color: black;
 }
 
 .browse {

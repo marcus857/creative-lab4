@@ -7,6 +7,7 @@
       </form>
     </div>
   </div>
+  <p> Click on a Card to Add it to the Black Jack Deck. You can edit your existing deck and see the values of the cards by clicking on the deck on the top right or just play with what you have</p>
   <ProductList :products="products" />
 </div>
 </template>

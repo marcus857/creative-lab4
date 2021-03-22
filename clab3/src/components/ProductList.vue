@@ -3,15 +3,10 @@
   <div class="products">
     <div class="product" v-for="product in products" :key="product.id">
       <div class="info">
-        <h1>{{product.name}}</h1>
-        <p>{{product.country}}</p>
+        <h2>{{product.name}}</h2>
       </div>
-      <div class="image">
-        <img :src="'/images/products/'+product.image">
-      </div>
-      <div class="price">
-        <h2>{{product.price}}</h2>
-        <button v-on:click="addProductToCart(product)">Add to Cart</button>
+      <div class="image" v-on:click="addProductToCart(product)">
+        <img :src="'/images/deck/'+product.image">
       </div>
     </div>
   </div>
@@ -50,7 +45,7 @@ export default {
 }
 
 .products {
-  margin-top: 20px;
+  margin-top: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -58,14 +53,13 @@ export default {
 
 .product {
   margin: 10px;
-  margin-top: 50px;
-  width: 200px;
+  margin-top: 10px;
+  width: 100px;
 }
 
 .product img {
-  border: 2px solid #333;
-  height: 250px;
-  width: 200px;
+  height: 155px;
+  width: 105px;
   object-fit: cover;
 }
 
@@ -76,10 +70,10 @@ export default {
 }
 
 .info {
-  background: #F2921D;
-  color: #000;
-  padding: 10px 30px;
-  height: 80px;
+  background: black;
+
+  padding: 1px 15px;
+  height: 50px;
 }
 
 .info h1 {
@@ -88,6 +82,7 @@ export default {
 
 .info h2 {
   font-size: 14px;
+  color: white;
 }
 
 .info p {
@@ -95,13 +90,9 @@ export default {
   font-size: 10px;
 }
 
-
-.price {
-  display: flex;
-}
-
 button {
   height: 50px;
+  margin: 5px;
   background: #000;
   color: white;
   border: none;
