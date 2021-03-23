@@ -5,26 +5,45 @@
       <form class="pure-form">
         <i class="fas fa-search"></i><input v-model="searchText" />
       </form>
+      
     </div>
   </div>
-  <p> Click on a Card to Add it to the Black Jack Deck. You can edit your existing deck and see the values of the cards by clicking on the deck on the top right or just play with what you have</p>
-  <ProductList :products="products" />
+  <p> If you would like to play with a non-standard deck create a new one!</p>
+
+      <div class="bigButton">
+        <button v-on:click="AddAllToDeck()">Click Here to Set to Standard Deck</button>
+      </div>
+
+  <PlayBlackJack :products="products" />
+
 </div>
 </template>
 
 
 <script>
-import ProductList from "../components/ProductList.vue"
+import PlayBlackJack from "../components/PlayBlackJack.vue"
 export default {
   name: 'Home',
   components: {
-    ProductList
+    PlayBlackJack
   },
     data() {
     return {
       searchText: '',
     }
   },
+
+   methods: {
+      AddAllToDeck () {
+
+          this.$root.$data.cart = [];
+          for (var i = 0; i < this.$root.$data.deck.length; i++) {
+           this.$root.$data.cart.push(this.$root.$data.deck[i])
+          }
+      
+      }
+    },
+
 computed: {
   products() {
     return this.$root.$data.products.filter(product => product.name.toLowerCase().search(this.searchText.toLowerCase()) >= 0);

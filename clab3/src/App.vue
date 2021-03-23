@@ -10,10 +10,10 @@
     <div id="side">
 
 <div id="lside">
-  <router-link to="/cart">
+  <router-link to="/CreateDeck">
     <div class="menu-item">
-        <img src="/images/PlayIcon.svg">
-        <p> Play BJ!</p>
+        <img src="/images/add.svg">
+        <p> Create Deck </p>
       </div>
   </router-link>
   </div>

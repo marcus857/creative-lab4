@@ -1,7 +1,7 @@
 <template>
 <div>
-  <h1> Your Cart</h1>
-  <div v-if="this.$root.$data.cart.length<1"><h2>Cart is Empty</h2></div>
+  <h1> Your Deck</h1>
+  <div v-if="this.$root.$data.cart.length<1"><h2>Deck is Empty</h2></div>
   <ProductCart :products="cart" />
 </div>
 </template>

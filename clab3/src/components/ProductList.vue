@@ -1,5 +1,8 @@
 <template>
 <div class="wrapper">
+
+
+
   <div class="products">
     <div class="product" v-for="product in products" :key="product.id">
       <div class="info">
@@ -17,18 +20,23 @@
 export default {
   name: 'ProductList',
   props: {
-    products: Array
+    products: Array,
+    deck: Array
   },
 
     methods: {
       addProductToCart (product) {
         this.$root.$data.cart.push(product)
+      },
+
+      AddAllToDeck (products) {
+        this.$root.$data.cart = products;
       }
     },
+    
 
     computed: {
     cart() {
-      alert(this.$root.$data.cart.length)
       return this.$root.$data.cart.length;
     }
   },

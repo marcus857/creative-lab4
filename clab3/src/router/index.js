@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Browse from '../views/Browse.vue'
 import Cart from '../views/Cart.vue'
+import CreateDeck from '../views/CreateDeck.vue'
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,11 @@ const routes = [
     path: '/cart',
     name: 'Cart',
     component: Cart
+  },
+  {
+    path: '/CreateDeck',
+    name: 'CreateDeck',
+    component: CreateDeck
   },
 ]
 
