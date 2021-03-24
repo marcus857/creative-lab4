@@ -2,9 +2,6 @@
 <div class="wrapper">
   <div class="products">
     <div class="product" v-for="product in products" :key="product.id">
-      <div class="info">
-        <h2>{{product.price}} points</h2>
-      </div>
       <div class="image">
         <img :src="'/images/deck/'+product.image">
       </div>

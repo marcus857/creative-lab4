@@ -7,7 +7,11 @@ import full from './fullDeck.js'
 let data = {
   products: mock,
   deck: full,
-  cart: []
+  cart: [],
+  hand: [],
+  dealer: [],
+  value: '',
+  dealerValue:''
 }
 
 new Vue({
