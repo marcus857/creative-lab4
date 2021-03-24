@@ -5,9 +5,7 @@
 
   <div class="products">
     <div class="product" v-for="product in products" :key="product.id">
-      <div class="info">
-        <h2>{{product.name}}</h2>
-      </div>
+
       <div class="image" v-on:click="addProductToCart(product)">
         <img :src="'/images/deck/'+product.image">
       </div>

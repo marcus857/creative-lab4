@@ -21,6 +21,9 @@
   </div>
     <div v-if="this.$root.$data.hand.length<1"><h2>Hand is Empty</h2></div>
     <div v-if="this.$root.$data.value>21"><h4>BUST!</h4></div>
+    <div v-else-if="this.$root.$data.value == -10"><h4>YOU LOOSE!</h4></div>
+    <div v-else-if="this.$root.$data.value == -2"><h4>TIE!</h4></div>
+    <div v-else-if="this.$root.$data.value == -3"><h4>YOU WIN!</h4></div>
      <div v-else> <PlayBlackJack :products="hand" /> </div>
             
 
@@ -154,9 +157,24 @@ if(this.$root.$data.cart.length == 0 ){
 
       },
             stand(){
+            
+            if(this.$root.$data.dealerValue<17)
+            this.dealerDraw ();
+            
+            if(this.$root.$data.dealerValue>this.$root.$data.value){
+              this.$root.$data.dealerValue = -10;
+              this.$root.$data.value = -10;
+            }
 
-            this.dealerDraw ();
-            this.dealerDraw ();
+            else if (this.$root.$data.dealerValue==this.$root.$data.value){
+                            this.$root.$data.dealerValue = -2;
+              this.$root.$data.value = -2;
+            }
+
+            else     {
+            this.$root.$data.dealerValue = -3;
+              this.$root.$data.value = -3;
+            }
 
 
         
