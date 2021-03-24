@@ -13,7 +13,7 @@
   <router-link to="/CreateDeck">
     <div class="menu-item">
         <img src="/images/add.svg">
-        <p> Create Deck </p>
+        <p> + Cards </p>
       </div>
   </router-link>
   </div>
@@ -79,13 +79,19 @@ color: black;
 }
 
 #lside img {
-  width: 63px;
-  margin: 10px;
+  width: 42px;
+  margin: 15px;
 }
 
 .menu-item {
   display: flex;
   flex-direction: column;
+}
+.router-link-exact-active .router-link--active{
+  color: black !important;
+}
+a{
+  color: black !important;
 }
 
 .menu-item p {

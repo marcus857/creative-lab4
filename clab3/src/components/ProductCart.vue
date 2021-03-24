@@ -95,8 +95,9 @@ export default {
 
 button {
   height: 50px;
-  margin: 0px;
+  margin-top: 5px;
   background: #000;
+  border-radius: 50%;
   color: white;
   border: none;
 }

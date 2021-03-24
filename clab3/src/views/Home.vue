@@ -1,15 +1,18 @@
 <template>
 <div>
 
-  <p> Click on the deck to draw, if you have not customized your deck, the game will play with a standard deck</p>
+  <p> Click on the deck to hit. If you tie the dealer it you win!. if you have not customized your deck, the game will play with a standard deck</p>
 
   
             <button v-on:click="startGame()">Start Game</button>
+            <button v-on:click="reloadPage()">Restart</button>
 
      <div v-if="this.$root.$data.dealerValue>21"><h4>BUST!</h4></div>
-     <div v-else> <Dealer :products="dealer" /> </div>
-            <button v-on:click="AddToHand()">Hit</button>
+     <div v-else-if ="this.$root.$data.dealer.length>0"> <h2>Dealer's Hand</h2>  <Dealer :products="dealer" /> </div>
+
             <button v-on:click="stand()">Stand</button>
+            
+             <h2>Your Hand</h2> 
 
   <div class="wrapper">
 
@@ -19,6 +22,7 @@
   </p>
 
   </div>
+ 
     <div v-if="this.$root.$data.hand.length<1"><h2>Hand is Empty</h2></div>
     <div v-if="this.$root.$data.value>21"><h4>BUST!</h4></div>
     <div v-else-if="this.$root.$data.value == -10"><h4>YOU LOOSE!</h4></div>
@@ -160,16 +164,17 @@ if(this.$root.$data.cart.length == 0 ){
             
             if(this.$root.$data.dealerValue<17)
             this.dealerDraw ();
+
+            if(this.$root.$data.dealerValue>21){
+            this.$root.$data.dealerValue = -10;
+            this.$root.$data.dealerValue = -10;
+            }
             
-            if(this.$root.$data.dealerValue>this.$root.$data.value){
+            else if(this.$root.$data.dealerValue>this.$root.$data.value){
               this.$root.$data.dealerValue = -10;
               this.$root.$data.value = -10;
             }
 
-            else if (this.$root.$data.dealerValue==this.$root.$data.value){
-                            this.$root.$data.dealerValue = -2;
-              this.$root.$data.value = -2;
-            }
 
             else     {
             this.$root.$data.dealerValue = -3;
@@ -179,7 +184,10 @@ if(this.$root.$data.cart.length == 0 ){
 
         
 
-      }
+      },
+        reloadPage(){
+    window.location.reload()
+  }
     },
 
 computed: {

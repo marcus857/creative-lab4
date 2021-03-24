@@ -12,6 +12,8 @@
 
       <div class="bigButton">
         <button v-on:click="AddAllToDeck()">Click Here to Set to Standard Deck</button>
+        <p> Card Just Added: {{this.$root.$data.addedCard}}</p>
+        
       </div>
 
   <ProductList :products="products" />

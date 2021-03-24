@@ -11,7 +11,8 @@ let data = {
   hand: [],
   dealer: [],
   value: '',
-  dealerValue:''
+  dealerValue:'',
+  addedCard: ''
 }
 
 new Vue({

@@ -25,6 +25,7 @@ export default {
     methods: {
       addProductToCart (product) {
         this.$root.$data.cart.push(product)
+        this.$root.$data.addedCard = product.name
       },
 
       AddAllToDeck (products) {
