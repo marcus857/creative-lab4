@@ -82,14 +82,106 @@ let full = [{
   country: "Hearts",
   image: "2H.jpg"
 },
-
 {
   id: 13,
   name: "Ace of Hearts",
   points: 11,
   country: "Hearts",
   image: "AH.jpg"
+},
+{
+  id: 14,
+  name: "King of Spades",
+  points: 10,
+  country: "Spades",
+  image: 'KS.jpg'
+},
+{
+  id: 15,
+  name: "Queen of Spades",
+  points: 10,
+  country: "Spades",
+  image: "QS.jpg"
+},
+{
+  id: 16,
+  name: "Jack of Spades",
+  points: 10,
+  country: "Spades",
+  image: "JS.jpg"
+},
+{
+  id: 17,
+  name: "10 of Spades",
+  points: 10,
+  country: "Spades",
+  image: "10S.jpg"
+},
+{
+  id: 18,
+  name: "9 of Spades",
+  points: 9,
+  country: "Spades",
+  image: "9S.jpg"
+},
+{
+  id: 19,
+  name: "8 of Spades",
+  points: 8,
+  country: "Spades",
+  image: "8S.jpg"
+},
+{
+  id: 20,
+  name: "7 of Spades",
+  points: 7,
+  country: "Spades",
+  image: "7S.jpg"
+},
+{
+  id: 21,
+  name: "6 of Spades",
+  points: 6,
+  country: "Spades",
+  image: "6S.jpg"
+},
+{
+  id: 22,
+  name: "5 of Spades",
+  points: 5,
+  country: "Spades",
+  image: "5S.jpg"
+},
+{
+  id: 23,
+  name: "4 of Spades",
+  points: 4,
+  country: "Spades",
+  image: "4S.jpg"
+},
+{
+  id: 24,
+  name: "3 of Spades",
+  points: 3,
+  country: "Spades",
+  image: "3S.jpg"
+},
+{
+  id: 25,
+  name: "2 of Spades",
+  points: 2,
+  country: "Spades",
+  image: "2S.jpg"
+},
+
+{
+  id: 26,
+  name: "Ace of Spades",
+  points: 11,
+  country: "Spades",
+  image: "AS.jpg"
 }
+
 ]
 
 export default full;

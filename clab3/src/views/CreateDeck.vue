@@ -8,7 +8,7 @@
       
     </div>
   </div>
-  <p> Click on a Card to Add it to the Black Jack Deck. You can edit your existing deck and see the values of the cards by clicking on the deck on the top right or just play with what you have</p>
+  <p> Click on a Card to Add it to the Black Jack Deck. You can edit your existing deck and see the values of the cards by clicking on the deck on the top right or just play with what you have. Make sure to add at least 10 cards in a custom deck</p>
 
       <div class="bigButton">
         <button v-on:click="AddAllToDeck()">Click Here to Set to Standard Deck</button>

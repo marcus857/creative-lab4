@@ -1,7 +1,10 @@
 <template>
 <div>
-
-  <p> Click on the deck to hit. If you tie the dealer it you win!. if you have not customized your deck, the game will play with a standard deck</p>
+<h3> Instructions </h3>
+  <p> The goal of blackjack is to beat the dealer's hand without going over 21.
+Face cards are worth 10, the ace in this game is only worth 11. Both the dealer and the player start with 2 cards
+To 'Hit' is to ask for another card, do this by clicking on the card below. If you go over 21 you bust, and the dealer wins regardless of the dealer's hand.
+If you have not customized your deck, the game will play with a standard deck. To play again you must click the restart button first.  </p>
 
   
             <button v-on:click="startGame()">Start Game</button>
